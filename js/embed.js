@@ -18,6 +18,7 @@ function onKeyDown(e) {
       let sendBtn = sibling.querySelector('button');
       if (sendBtn) {
         sendBtn.click()
+        e.preventDefault()
       }
     }
   }
