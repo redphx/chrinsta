@@ -11,6 +11,15 @@ function onKeyDown(e) {
     } else {
       window.location.reload();
     }
+  } else if (window.location.href.indexOf('/direct/t/') > -1) {
+    // Enter to send message
+    if (e.keyCode === 13 && !e.shiftKey) {
+      let sibling = e.target.parentNode.nextElementSibling;
+      let sendBtn = sibling.querySelector('button');
+      if (sendBtn) {
+        sendBtn.click()
+      }
+    }
   }
 }
 

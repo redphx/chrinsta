@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "ChrInsta",
   "description": "Chrome App Wrapper for instagram.com",
-  "version": "1.0",
+  "version": "1.0.1",
   "icons": {
     "128": "img/icon.png"
   },
