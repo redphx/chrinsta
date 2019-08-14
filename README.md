@@ -5,7 +5,6 @@
 
 Đây chỉ là wrapper của **instagram.com** với user-agent là của mobile browser.  
 App không theo dõi hay thu thập bất kỳ thông tin gì của người dùng. Vô tư đọc code :))  
-Nhấn F5 hoặc Ctrl/Cmd + R để refresh app.  
 
 ## Cài đặt:
 1. [Tải file nguồn](https://github.com/redphx/chrinsta/archive/master.zip) và giải nén vào thư mục bất kỳ.
@@ -19,6 +18,11 @@ Nhấn F5 hoặc Ctrl/Cmd + R để refresh app.
 2. [Tải file nguồn](https://github.com/redphx/chrinsta/archive/master.zip) và giải nén vào thư mục code cũ.
 3. Mở đường dẫn **chrome://extensions** trong Google Chrome.
 4. Tìm ChrInsta, nhấn nút Refresh để cập nhật code mới.
+
+## Các phím tắt
+- Nhấn F5 hoặc Ctrl/Cmd + R để refresh app.
+- Nhấn Enter để gởi tin nhắn. Shift + Enter để xuống dòng.
+- Nhấn Esc để quay lại trang trước (Back).
 
 ## Change Logs:
 
