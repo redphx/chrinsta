@@ -11,6 +11,10 @@ function onKeyDown(e) {
     } else {
       window.location.reload();
     }
+  } else if (e.keyCode === 27) {
+    // Esc key
+    let backBtn = document.querySelector('header span[class*=glyphsSpriteChevron_left]')
+    backBtn && backBtn.click()
   } else if (window.location.href.indexOf('/direct/t/') > -1) {
     // Enter to send message
     if (e.keyCode === 13 && !e.shiftKey) {
