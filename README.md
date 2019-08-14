@@ -22,6 +22,10 @@ Nhấn F5 hoặc Ctrl/Cmd + R để refresh app.
 
 ## Change Logs:
 
+- 1.0.2 (2019/08/14):
+  - Nhấn Esc để quay về trang trước.
+  - Thêm chức năng thông báo có phiên bản mới.
+
 - 1.0.1 (2019/08/05):
   - Thêm chức năng nhấn Enter để gởi tin nhắn (Shift + Enter để xuống dòng).
 
