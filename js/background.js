@@ -1,3 +1,24 @@
+let checkForUpdate = () => {
+  let manifestUrl = 'https://raw.githubusercontent.com/redphx/chrinsta/master/manifest.json';
+
+  let xhr = new XMLHttpRequest();
+  xhr.open('GET', manifestUrl, true);
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState == 4) {
+      let resp = JSON.parse(xhr.responseText);
+      if (resp.version != chrome.runtime.getManifest().version) {
+        chrome.notifications.create({
+          type: 'basic',
+          title: 'ChrInsta',
+          iconUrl: 'img/icon.png',
+          message: 'Đã có phiên bản mới ' + resp.version +'. Nhấn vào để xem hướng dẫn cập nhật.',
+        });
+      }
+    }
+  }
+  xhr.send();
+}
+
 let runApp = () => {
   let appWindow = {
     id: 'embed',
@@ -16,6 +37,8 @@ let runApp = () => {
 }
 
 let onWindowLoaded = popup => {
+  checkForUpdate();
+
   return win => {
     win.contentWindow.onload = () => {
       let webview = win.contentWindow.document.getElementById('webview');
@@ -32,5 +55,10 @@ let onWindowLoaded = popup => {
     };
   };
 }
+
+chrome.notifications.onClicked.addListener(notificationId => {
+  let homepageUrl = 'https://github.com/redphx/chrinsta';
+  window.open(homepageUrl);
+});
 
 chrome.app.runtime.onLaunched.addListener(runApp);
