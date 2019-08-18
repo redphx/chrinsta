@@ -1,6 +1,9 @@
 # ChrInsta
 
 #### App cho Google Chrome để sử dụng Instagram trên máy tính (hỗ trợ chat + đăng ảnh).
+
+![Screenshot](https://i.imgur.com/ysVuUrV.png)
+
 ---
 
 Đây chỉ là wrapper của **instagram.com** với user-agent là của mobile browser.  
