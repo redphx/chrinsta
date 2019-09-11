@@ -37,6 +37,13 @@ function onMouseClick(e) {
       window.open(e.target.href);
     }
   }
+
+  window.chrintaFocusTimeout && clearTimeout(window.chrintaFocusTimeout);
+  window.chrintaFocusTimeout = setTimeout(() => {
+    if (location.href.indexOf('/direct/t/') !== -1) {
+      document.querySelector('textarea').focus();
+    }
+  }, 100);
 }
 
 window.addEventListener('keydown', onKeyDown);
