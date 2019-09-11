@@ -28,10 +28,24 @@ function onKeyDown(e) {
   }
 }
 
+function onMouseClick(e) {
+  let target = e.target;
+  if (target.nodeName === 'A') {
+    let parent = target.parentElement;
+    if (parent.nodeName === 'SPAN' && parent.classList.contains('Linkify')) {
+      e.preventDefault();
+      window.open(e.target.href);
+    }
+  }
+}
+
 window.addEventListener('keydown', onKeyDown);
 
 webview.addEventListener('contentload', () => {
   webview.executeScript({
-    code: 'window.addEventListener("keydown", ' + onKeyDown.toString() + ')',
+    code: [
+      'window.addEventListener("keydown", ' + onKeyDown.toString() + ')',
+      'window.addEventListener("click", ' + onMouseClick.toString() + ')',
+    ].join(';\n'),
   });
 });

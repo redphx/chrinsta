@@ -50,7 +50,10 @@ let onWindowLoaded = popup => {
       });
 
       webview.addEventListener('newwindow', e => {
-        win.contentWindow.open(e.targetUrl);
+        e.preventDefault();
+        if (e.targetUrl !== 'about:blank') {
+          win.contentWindow.open(e.targetUrl);
+        }
       });
     };
   };
