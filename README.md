@@ -29,6 +29,10 @@ App không theo dõi hay thu thập bất kỳ thông tin gì của người dù
 
 ## Change Logs:
 
+- 1.0.3 (2019/09/11):
+  - Sửa lỗi không mở được link gởi trong chat.
+  - Tự động focus vào khung nội dung mỗi khi mở một đoạn chat nào.
+
 - 1.0.2 (2019/08/14):
   - Nhấn Esc để quay về trang trước.
   - Thêm chức năng thông báo có phiên bản mới.
